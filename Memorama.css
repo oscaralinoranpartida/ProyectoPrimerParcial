@@ -1,0 +1,59 @@
+body {/*Establecemos las caracteristicas de nuestro body*/
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    display: grid;/*Centramos elementos*/
+    place-items: center;
+}
+
+table {/*Establecemos las caracterisitcas de nuestra tabla*/
+	margin: 0 auto;
+}
+
+.card {/*Establecemos caracteristicas de nuestra clase card*/
+    height: 150px;
+    width: 150px;
+    border: 1px solid #ccc;
+    transform-style: preserve-3d;/*Perserva el 3d*/
+    transition: .7s;
+}
+
+.card img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  display: grid;
+}
+  .card.active .card-front {
+	transform: rotateY(-180deg);
+  }
+  
+  .card.active .card-back {
+	transform: rotateY(0deg);
+  }
+  
+  .card.flipped .card-front {
+	transform: rotateY(180deg);
+  }
+  
+  .card.flipped .card-back {
+	transform: rotateY(0deg);
+  }
+  .btn{
+    padding: 1em 1.5em;
+    color: #222;
+    background-color:white;
+    border: 1px solid;
+    outline:none;
+}
+.card:hover{
+    background-color: aquamarine;
+}
+.btn:hover{
+  background-color: #7883a6;;
+}
+.rotate{
+  transform: rotateY(180deg);
+}
